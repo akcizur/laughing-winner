@@ -741,9 +741,33 @@ export const ThirdPersonViewport: React.FC<ThirdPersonViewportProps> = ({
     playAnimationRef.current = playAnimation;
 
     const gltfLoader = new GLTFLoader();
-    gltfLoader.load(
-      '/assets/models/mixamo_base.glb',
-      (gltf) => {
+    const loadChunkedGlb = async () => {
+      const partUrls = [
+        '/assets/models/mixamo_base.glb.part01',
+        '/assets/models/mixamo_base.glb.part02',
+        '/assets/models/mixamo_base.glb.part03',
+      ];
+      const buffers = await Promise.all(
+        partUrls.map(async (url) => {
+          const response = await fetch(url);
+          if (!response.ok) throw new Error(`Failed to load ${url}: ${response.status}`);
+          return response.arrayBuffer();
+        }),
+      );
+      const total = buffers.reduce((sum, buffer) => sum + buffer.byteLength, 0);
+      const combined = new Uint8Array(total);
+      let offset = 0;
+      for (const buffer of buffers) {
+        combined.set(new Uint8Array(buffer), offset);
+        offset += buffer.byteLength;
+      }
+      return await new Promise((resolve, reject) => {
+        gltfLoader.parse(combined.buffer, '/assets/models/', resolve, reject);
+      });
+    };
+
+    loadChunkedGlb()
+      .then((gltf) => {
         mixamoBaseGroup.remove(fallbackMannequin);
         const model = gltf.scene;
         model.traverse((obj) => {

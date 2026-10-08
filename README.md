@@ -1,34 +1,44 @@
-# Containers Privacy Chromium (CPC)
+# laughing-winner
 
-CPC is a Chromium 124.x source overlay for isolated Multi-Account Containers.
+## Third Person Controller Web App
 
-This repository contains the CPC-side source tree under `//cpc/`. It is intentionally not a complete Chromium checkout. Apply the overlay to a Chromium 124.x checkout and connect the thin Chromium-side hooks described in `docs/chromium-124-integration.md`.
+The repository now includes the imported `as-main.zip` application as the runnable Vite + React 19 + Three.js project at the repository root.
 
-## Included
+### App
 
-- container lifecycle and metadata
-- container storage partition naming/path mapping
-- domain-rule navigation seam
-- per-container permission store
-- workspace model
-- Mojo interfaces
-- native Views sidebar / indicator skeleton
-- `chrome://cpc-settings` WebUI skeleton
-- localhost automation socket seam
-- extension API seam
-- lock/sync interfaces
-- reference Go sync server
+- React 19
+- Vite
+- Three.js / WebGL 2
+- Tailwind CSS v4 via `@tailwindcss/vite`
+- Keyboard/mouse, touch and Gamepad API input
+- Mixamo GLB character asset
+- OBB/capsule physics
+- camera spring-arm and trauma shake
+- spatial mini-map
+- controller inspector
+- localStorage configuration persistence
+- procedural Web Audio effects
 
-## Target
+### Commands
 
-Chromium 124.x, C++17, GN/Ninja, Clang 16+.
+```bash
+npm install
+npm run dev
+npm run lint
+npm run build
+npm run preview
+```
 
-## Important
+The application listens on port 3000 during development.
 
-This is an integration scaffold. The lock/sync crypto files are not a production security implementation. Connect them to Chromium/BoringSSL and platform credential APIs before shipping.
+### Assets
 
-## Overlay
+`public/assets/` contains the imported Mixamo model and grid textures from the supplied `as-main.zip`.
 
-Copy this repository over a Chromium checkout, then resolve the Chromium-side integration points in `docs/chromium-124-integration.md`.
+### CPC source
 
-A helper is included at `tools/apply_cpc_overlay.py`.
+The earlier Containers Privacy Chromium scaffold is still retained under `cpc/`, `docs/`, and `sync/`. It is a separate Chromium 124.x overlay and is not required by the React application.
+
+## Source import
+
+Imported from the supplied `as-main.zip` archive on 2026-10-08.

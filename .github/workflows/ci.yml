@@ -1,0 +1,24 @@
+name: CPC source checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  source-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check required CPC directories
+        run: |
+          test -d cpc/container
+          test -d cpc/browser
+          test -d cpc/storage
+          test -d cpc/mojo
+          test -d cpc/ui
+      - name: Check Python overlay helper
+        run: python3 -m py_compile tools/apply_cpc_overlay.py
+      - name: Check Go reference server
+        working-directory: sync/server
+        run: go test ./...

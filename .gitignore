@@ -1,5 +1,8 @@
-out/
-.vscode/
-.idea/
+node_modules/
+build/
+dist/
+coverage/
 .DS_Store
-*.swp
+*.log
+.env*
+!.env.example

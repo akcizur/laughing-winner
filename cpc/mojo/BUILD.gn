@@ -1,0 +1,5 @@
+mojom("cpc_mojo") {
+  sources = [
+    "cpc.mojom",
+  ]
+}

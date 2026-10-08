@@ -1,0 +1,7 @@
+source_set("automation") {
+  sources = [
+    "automation_socket_server.cc",
+    "automation_socket_server.h",
+  ]
+  deps = [ "//base" ]
+}

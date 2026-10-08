@@ -1,0 +1,9 @@
+source_set("cpc_navigation") {
+  sources = [
+    "container_navigation_throttle.cc",
+    "container_navigation_throttle.h",
+    "container_rule_matcher.cc",
+    "container_rule_matcher.h",
+  ]
+  deps = [ "//base" ]
+}

@@ -1,0 +1,6 @@
+group("ui") {
+  public_deps = [
+    "//cpc/ui/views:views",
+    "//cpc/ui/webui:webui",
+  ]
+}

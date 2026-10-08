@@ -1,0 +1,9 @@
+source_set("cpc_storage") {
+  sources = [
+    "container_partition_key.cc",
+    "container_partition_key.h",
+    "container_storage_mapper.cc",
+    "container_storage_mapper.h",
+  ]
+  deps = [ "//base" ]
+}

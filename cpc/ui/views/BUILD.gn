@@ -1,0 +1,9 @@
+source_set("views") {
+  sources = [
+    "cpc_container_indicator_view.cc",
+    "cpc_container_indicator_view.h",
+    "cpc_sidebar_view.cc",
+    "cpc_sidebar_view.h",
+  ]
+  deps = [ "//base", "//ui/views" ]
+}

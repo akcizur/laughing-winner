@@ -1,0 +1,20 @@
+module cpc.mojom;
+
+struct ContainerInfo {
+  int64 container_id;
+  string name;
+  int32 color;
+  bool is_locked;
+};
+
+interface ContainerManager {
+  CreateContainer(string name, int32 color) => (int64 container_id);
+  DeleteContainer(int64 container_id) => (bool success);
+  ListContainers() => (array<ContainerInfo> containers);
+  SetDomainRule(string pattern, int64 container_id);
+};
+
+interface ContainerHost {
+  GetActiveContainerId() => (int64 id);
+  SetActiveContainerId(int64 id);
+};

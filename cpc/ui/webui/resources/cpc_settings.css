@@ -1,0 +1,6 @@
+:root{color-scheme:dark;font:14px system-ui,sans-serif;background:#0f1115;color:#eef2f7}
+*{box-sizing:border-box}body{margin:0}.shell{min-height:100vh;display:grid;grid-template-columns:240px 1fr}
+aside{padding:24px;border-right:1px solid #252a33;background:#161a21}
+section{padding:32px;max-width:900px}.actions{display:flex;gap:10px;margin:20px 0}
+button{border:0;border-radius:999px;padding:10px 16px;font-weight:650;cursor:pointer}
+#state{padding:16px;border-radius:16px;background:#171b22;min-height:220px;overflow:auto}

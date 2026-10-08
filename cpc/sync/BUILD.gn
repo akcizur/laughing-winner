@@ -1,0 +1,7 @@
+source_set("cpc_sync") {
+  sources = [
+    "sync_client.cc",
+    "sync_client.h",
+  ]
+  deps = [ "//base" ]
+}

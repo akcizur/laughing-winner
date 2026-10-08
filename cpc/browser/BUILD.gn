@@ -1,0 +1,9 @@
+source_set("browser") {
+  sources = [
+    "cpc_browser_context_manager.cc",
+    "cpc_browser_context_manager.h",
+    "cpc_profile_prefs.cc",
+    "cpc_profile_prefs.h",
+  ]
+  deps = [ "//base" ]
+}

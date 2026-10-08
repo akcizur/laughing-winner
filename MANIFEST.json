@@ -1,0 +1,8 @@
+{
+  "name": "containers-privacy-chromium",
+  "version": "0.1.0-source-overlay",
+  "chromium_baseline": "124.x",
+  "language": "C++17",
+  "root": "cpc",
+  "status": "source-overlay"
+}

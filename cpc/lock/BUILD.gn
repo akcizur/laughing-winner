@@ -1,0 +1,7 @@
+source_set("cpc_lock") {
+  sources = [
+    "container_lock_state.cc",
+    "container_lock_state.h",
+  ]
+  deps = [ "//base" ]
+}

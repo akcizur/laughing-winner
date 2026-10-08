@@ -1,0 +1,16 @@
+group("cpc") {
+  public_deps = [
+    "//cpc/automation:automation",
+    "//cpc/browser:browser",
+    "//cpc/container:container",
+    "//cpc/extensions:extensions",
+    "//cpc/lock:cpc_lock",
+    "//cpc/mojo:cpc_mojo",
+    "//cpc/navigation:cpc_navigation",
+    "//cpc/permissions:cpc_permissions",
+    "//cpc/storage:cpc_storage",
+    "//cpc/sync:cpc_sync",
+    "//cpc/ui:ui",
+    "//cpc/workspace:workspace",
+  ]
+}

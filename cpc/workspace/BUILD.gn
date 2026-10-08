@@ -1,0 +1,7 @@
+source_set("workspace") {
+  sources = [
+    "workspace_manager.cc",
+    "workspace_manager.h",
+  ]
+  deps = [ "//base" ]
+}

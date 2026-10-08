@@ -1,0 +1,3 @@
+group("cpc_root") {
+  public_deps = [ "//cpc" ]
+}

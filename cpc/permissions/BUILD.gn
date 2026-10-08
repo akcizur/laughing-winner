@@ -1,0 +1,7 @@
+source_set("cpc_permissions") {
+  sources = [
+    "container_permission_store.cc",
+    "container_permission_store.h",
+  ]
+  deps = [ "//base" ]
+}

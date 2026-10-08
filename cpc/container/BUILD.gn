@@ -1,0 +1,7 @@
+source_set("container") {
+  sources = [
+    "container_manager.cc",
+    "container_manager.h",
+  ]
+  deps = [ "//base" ]
+}

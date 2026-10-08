@@ -2,6 +2,12 @@ source_set("container") {
   sources = [
     "container_manager.cc",
     "container_manager.h",
+    "container_persistence.cc",
+    "container_persistence.h",
+    "container_record.cc",
+    "container_record.h",
+    "container_registry.cc",
+    "container_registry.h",
   ]
   deps = [ "//base" ]
 }

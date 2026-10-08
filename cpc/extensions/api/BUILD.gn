@@ -1,0 +1,7 @@
+source_set("cpc_extensions_api") {
+  sources = [
+    "cpc_containers_api.cc",
+    "cpc_containers_api.h",
+  ]
+  deps = [ "//base" ]
+}

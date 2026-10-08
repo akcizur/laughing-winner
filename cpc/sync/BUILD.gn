@@ -1,5 +1,10 @@
 source_set("cpc_sync") {
   sources = [
+    "container_blob_codec.cc",
+    "container_blob_codec.h",
+    "container_crypto_utils.cc",
+    "container_crypto_utils.h",
+    "container_export_format.h",
     "sync_client.cc",
     "sync_client.h",
   ]

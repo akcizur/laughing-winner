@@ -2,8 +2,16 @@ source_set("browser") {
   sources = [
     "cpc_browser_context_manager.cc",
     "cpc_browser_context_manager.h",
+    "cpc_container_service.cc",
+    "cpc_container_service.h",
+    "cpc_container_service_factory.cc",
+    "cpc_container_service_factory.h",
+    "cpc_container_tab_helper.cc",
+    "cpc_container_tab_helper.h",
+    "cpc_profile_client.cc",
+    "cpc_profile_client.h",
     "cpc_profile_prefs.cc",
     "cpc_profile_prefs.h",
   ]
-  deps = [ "//base" ]
+  deps = [ "//base", "//cpc/container:container" ]
 }

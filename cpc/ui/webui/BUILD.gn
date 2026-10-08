@@ -2,6 +2,8 @@ source_set("webui") {
   sources = [
     "cpc_settings_ui.cc",
     "cpc_settings_ui.h",
+    "cpc_settings_ui_data_source.cc",
+    "cpc_settings_ui_data_source.h",
   ]
   deps = [ "//content/browser", "//ui/webui" ]
 }
